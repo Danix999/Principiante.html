@@ -1,0 +1,475 @@
+<!--
+====================================================================
+                  Proyecto de Aprendizaje: Desarrollo Web Full-Stack
+====================================================================
+
+En esta sección, aprenderás sobre los atributos en HTML y cómo se utilizan
+en diferentes elementos. También exploraremos las listas y sus atributos,
+incluyendo el uso de `start` en listas ordenadas.
+
+====================================================================
+-->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendiendo Atributos y Listas en HTML</title>
+    <!--
+    --------------------------------------------------------------------
+    Nota: En este proyecto, nos enfocaremos únicamente en HTML.
+    No incluiremos estilos CSS para mantener la simplicidad y el enfoque
+    en la estructura y los atributos de HTML.
+    --------------------------------------------------------------------
+    -->
+</head>
+<body>
+    <!--
+    ====================================================================
+                            SECCIÓN: Atributos en HTML
+    ====================================================================
+
+    Los atributos proporcionan información adicional sobre los elementos HTML.
+    Se escriben dentro de la etiqueta de apertura del elemento y generalmente
+    vienen en pares clave-valor, separados por un signo igual (=) y encerrados
+    entre comillas.
+
+    Sintaxis:
+        <elemento atributo="valor">Contenido</elemento>
+    -->
+
+    <section id="atributos">
+        <h2>Atributos en HTML</h2>
+
+        <!--
+        --------------------------------------------------------------------
+        1. Atributos Comunes
+        --------------------------------------------------------------------
+        A continuación, se presentan algunos de los atributos más utilizados
+        en HTML y cómo se aplican a diferentes elementos.
+        --------------------------------------------------------------------
+        -->
+
+        <!--
+        --------------------------------------------------------------------
+        a. Atributo `id`
+        - Descripción: Proporciona un identificador único para un elemento.
+        - Uso: Comúnmente usado para aplicar estilos específicos con CSS
+                o para enlazar con JavaScript.
+        --------------------------------------------------------------------
+        -->
+        <p id="parrafo1">
+            Este párrafo tiene un atributo <code>id</code> con el valor "parrafo1".
+        </p>
+
+        <!--
+        --------------------------------------------------------------------
+        b. Atributo `class`
+        - Descripción: Asigna una o varias clases a un elemento, permitiendo
+                      agrupar elementos que comparten estilos o comportamientos.
+        - Uso: Ideal para aplicar estilos comunes a múltiples elementos
+                sin necesidad de asignar un estilo único a cada uno.
+        --------------------------------------------------------------------
+        -->
+        <p class="texto-destacado">
+            Este párrafo tiene una <code>class</code> llamada "texto-destacado".
+        </p>
+
+        <!--
+        --------------------------------------------------------------------
+        c. Atributo `src` (Source)
+        - Descripción: Especifica la ruta de la fuente de un recurso externo,
+                      como una imagen o un script.
+        - Uso: Utilizado principalmente en elementos como <img>, <script>,
+                <iframe>, etc.
+        --------------------------------------------------------------------
+        -->
+        <img src="https://via.placeholder.com/150" alt="Imagen de ejemplo">
+
+        <!--
+        --------------------------------------------------------------------
+        d. Atributo `href` (Hypertext Reference)
+        - Descripción: Define la URL a la que se dirige un enlace.
+        - Uso: Utilizado en el elemento <a> para crear hipervínculos.
+        --------------------------------------------------------------------
+        -->
+        <a href="https://www.ejemplo.com">Visita Ejemplo.com</a>
+
+        <!--
+        --------------------------------------------------------------------
+        e. Atributo `alt` (Alternative Text)
+        - Descripción: Proporciona un texto alternativo para una imagen si
+                      esta no puede ser mostrada.
+        - Uso: Esencial para la accesibilidad y para el SEO.
+        --------------------------------------------------------------------
+        -->
+        <img src="imagen-no-disponible.jpg" alt="Descripción de la imagen alternativa">
+
+        <!--
+        --------------------------------------------------------------------
+        f. Atributo `title`
+        - Descripción: Ofrece información adicional sobre un elemento.
+                      Se muestra como una tooltip cuando el usuario pasa
+                      el cursor sobre el elemento.
+        - Uso: Puede ser usado en casi cualquier elemento HTML.
+        --------------------------------------------------------------------
+        -->
+        <a href="https://www.ejemplo.com" title="Ir a Ejemplo.com">Enlace con Tooltip</a>
+
+        <!--
+        --------------------------------------------------------------------
+        g. Atributo `target`
+        - Descripción: Especifica dónde se abrirá el documento vinculado.
+        - Valores Comunes:
+            _self: En la misma pestaña o ventana (predeterminado).
+            _blank: En una nueva pestaña o ventana.
+            _parent: En el marco padre.
+            _top: En todo el cuerpo de la ventana.
+        - Uso: Utilizado en elementos <a>, <form>, etc.
+        --------------------------------------------------------------------
+        -->
+        <a href="https://www.ejemplo.com" target="_blank">Abrir en una nueva pestaña</a>
+
+        <!--
+        --------------------------------------------------------------------
+        h. Atributo `disabled`
+        - Descripción: Deshabilita un elemento interactivo.
+        - Uso: Común en elementos de formulario como <button>, <input>, <select>, etc.
+        --------------------------------------------------------------------
+        -->
+        <button disabled>Botón Deshabilitado</button>
+
+        <!--
+        --------------------------------------------------------------------
+        i. Atributo `placeholder`
+        - Descripción: Muestra un texto de ejemplo dentro de un campo de entrada
+                      cuando está vacío.
+        - Uso: Utilizado en elementos <input> y <textarea>.
+        --------------------------------------------------------------------
+        -->
+        <input type="text" placeholder="Escribe tu nombre aquí">
+
+        <!--
+        --------------------------------------------------------------------
+        j. Atributo `value`
+        - Descripción: Especifica el valor inicial de un elemento de entrada.
+        - Uso: Utilizado en elementos <input>, <option>, <button>, etc.
+        --------------------------------------------------------------------
+        -->
+        <input type="submit" value="Enviar Formulario">
+    </section>
+
+    <!--
+    ====================================================================
+                             SECCIÓN: Listas en HTML
+    ====================================================================
+
+    Las listas en HTML permiten organizar y presentar información de manera
+    estructurada. Existen principalmente dos tipos de listas: ordenadas y
+    desordenadas.
+
+    - Listas Desordenadas (<ul>): Presentan elementos sin un orden específico.
+    - Listas Ordenadas (<ol>): Presentan elementos en un orden específico,
+                                 generalmente numerados.
+
+    Además, las listas pueden contener listas anidadas para representar
+    estructuras jerárquicas más complejas.
+    -->
+
+    <section id="listas">
+        <h2>Listas en HTML</h2>
+
+        <!--
+        --------------------------------------------------------------------
+        1. Listas Desordenadas (<ul>)
+        --------------------------------------------------------------------
+        Utilizadas para listar elementos sin un orden particular.
+        --------------------------------------------------------------------
+        -->
+        <h3>Lista Desordenada</h3>
+        <ul>
+            <li>Elemento 1</li>
+            <li>Elemento 2</li>
+            <li>Elemento 3</li>
+        </ul>
+
+        <!--
+        --------------------------------------------------------------------
+        2. Listas Ordenadas (<ol>)
+        --------------------------------------------------------------------
+        Utilizadas para listar elementos en un orden específico, usualmente
+        numerados.
+        --------------------------------------------------------------------
+        -->
+        <h3>Lista Ordenada</h3>
+        <ol>
+            <li>Primer Paso</li>
+            <li>Segundo Paso</li>
+            <li>Tercer Paso</li>
+        </ol>
+
+        <!--
+        --------------------------------------------------------------------
+        3. Atributos en Listas Ordenadas
+        --------------------------------------------------------------------
+        Las listas ordenadas soportan atributos que permiten personalizar
+        la numeración o el estilo de los ítems.
+        --------------------------------------------------------------------
+        -->
+
+        <!--
+        a. Atributo `start`
+        - Descripción: Especifica el número inicial de la lista ordenada.
+        - Uso: Útil cuando deseas que la numeración comience en un valor
+                diferente al predeterminado (1).
+        --------------------------------------------------------------------
+        -->
+        <h3>Lista Ordenada con Atributo <code>start</code></h3>
+        <ol start="5">
+            <li>Elemento 5</li>
+            <li>Elemento 6</li>
+            <li>Elemento 7</li>
+        </ol>
+
+        <!--
+        b. Atributo `type`
+        - Descripción: Define el tipo de marcador que se usará para la lista.
+        - Valores Comunes:
+            - "1": Números (predeterminado).
+            - "A": Letras mayúsculas.
+            - "a": Letras minúsculas.
+            - "I": Números romanos mayúsculos.
+            - "i": Números romanos minúsculos.
+        - Uso: Permite personalizar la apariencia de la lista ordenada.
+        --------------------------------------------------------------------
+        -->
+        <h3>Lista Ordenada con Atributo <code>type</code></h3>
+        <ol type="A">
+            <li>Elemento A</li>
+            <li>Elemento B</li>
+            <li>Elemento C</li>
+        </ol>
+
+        <!--
+        --------------------------------------------------------------------
+        4. Listas Anidadas
+        --------------------------------------------------------------------
+        Permiten crear listas dentro de listas para representar estructuras
+        jerárquicas más complejas.
+        --------------------------------------------------------------------
+        -->
+        <h3>Lista Anidada</h3>
+        <ul>
+            <li>Frutas
+                <ul>
+                    <li>Manzana</li>
+                    <li>Banana</li>
+                    <li>Naranja</li>
+                </ul>
+            </li>
+            <li>Verduras
+                <ul>
+                    <li>Lechuga</li>
+                    <li>Tomate</li>
+                    <li>Espinaca</li>
+                </ul>
+            </li>
+            <li>Carnes</li>
+        </ul>
+
+        <!--
+        --------------------------------------------------------------------
+        5. Ejemplo Completo de Listas con Atributos
+        --------------------------------------------------------------------
+        A continuación, se presenta un ejemplo que combina diferentes
+        tipos de listas y atributos para mostrar cómo se pueden utilizar
+        en conjunto.
+        --------------------------------------------------------------------
+        -->
+        <h3>Ejemplo Completo de Listas con Atributos</h3>
+        <ol type="I" start="3">
+            <li>Elemento III</li>
+            <li>Elemento IV
+                <ol type="a">
+                    <li>Subelemento a</li>
+                    <li>Subelemento b</li>
+                </ol>
+            </li>
+            <li>Elemento V</li>
+        </ol>
+    </section>
+
+    <!--
+    ====================================================================
+                           SECCIÓN: Otros Atributos Útiles
+    ====================================================================
+
+    Además de los atributos ya mencionados, existen otros atributos que
+    pueden ser muy útiles en diferentes contextos dentro de HTML.
+    A continuación, se presentan algunos de ellos con ejemplos.
+    -->
+
+    <section id="otros-atributos">
+        <h2>Otros Atributos Útiles en HTML</h2>
+
+        <!--
+        --------------------------------------------------------------------
+        1. Atributo `data-*`
+        --------------------------------------------------------------------
+        - Descripción: Permite almacenar datos personalizados en los
+                      elementos HTML.
+        - Uso: Útil para pasar información a scripts de JavaScript sin
+                afectar la presentación.
+        --------------------------------------------------------------------
+        -->
+        <div data-usuario-id="12345">
+            Este div tiene un atributo personalizado <code>data-usuario-id</code>.
+        </div>
+
+        <!--
+        --------------------------------------------------------------------
+        2. Atributo `lang`
+        --------------------------------------------------------------------
+        - Descripción: Especifica el idioma del contenido del elemento.
+        - Uso: Mejora la accesibilidad y el SEO, y es útil para navegadores
+                y tecnologías asistivas.
+        --------------------------------------------------------------------
+        -->
+        <p lang="en">
+            This paragraph is written in English.
+        </p>
+
+        <!--
+        --------------------------------------------------------------------
+        3. Atributo `title`
+        --------------------------------------------------------------------
+        - Descripción: Proporciona información adicional sobre el elemento.
+        - Uso: Se muestra como una tooltip cuando el usuario pasa el cursor
+                sobre el elemento.
+        --------------------------------------------------------------------
+        -->
+        <span title="Información adicional">Pasa el cursor sobre mí</span>
+
+        <!--
+        --------------------------------------------------------------------
+        4. Atributo `tabindex`
+        --------------------------------------------------------------------
+        - Descripción: Controla el orden de navegación mediante el teclado.
+        - Uso: Útil para mejorar la accesibilidad y la navegación en la
+                página.
+        --------------------------------------------------------------------
+        -->
+        <button tabindex="1">Primer Botón</button>
+        <button tabindex="2">Segundo Botón</button>
+
+        <!--
+        --------------------------------------------------------------------
+        5. Atributo `readonly`
+        --------------------------------------------------------------------
+        - Descripción: Hace que un campo de entrada sea de solo lectura.
+        - Uso: Utilizado en elementos <input> y <textarea> para mostrar
+                información que no debe ser modificada por el usuario.
+        --------------------------------------------------------------------
+        -->
+        <input type="text" value="No editable" readonly>
+
+        <!--
+        --------------------------------------------------------------------
+        6. Atributo `multiple`
+        --------------------------------------------------------------------
+        - Descripción: Permite seleccionar múltiples opciones en elementos
+                      como <select> y <input type="file">.
+        - Uso: Útil cuando se requiere que el usuario seleccione más de
+                una opción o cargue varios archivos.
+        --------------------------------------------------------------------
+        -->
+        <label for="archivos">Selecciona archivos:</label>
+        <input type="file" id="archivos" name="archivos" multiple>
+
+        <!--
+        --------------------------------------------------------------------
+        7. Atributo `required`
+        --------------------------------------------------------------------
+        - Descripción: Indica que un campo de formulario debe ser completado
+                      antes de enviar el formulario.
+        - Uso: Utilizado en elementos de entrada como <input>, <select>,
+                <textarea> para asegurar que el usuario proporcione la
+                información necesaria.
+        --------------------------------------------------------------------
+        -->
+        <form>
+            <label for="nombre">Nombre (requerido):</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <input type="submit" value="Enviar">
+        </form>
+    </section>
+
+    <!--
+    ====================================================================
+                           SECCIÓN: Ejercicios Prácticos
+    ====================================================================
+
+    Realiza los siguientes ejercicios para afianzar tus conocimientos
+    sobre atributos y listas en HTML.
+
+    --------------------------------------------------------------------
+    Ejercicio 1:
+    - Crea una lista ordenada que comience en el número 10 y utilice
+      letras minúsculas como marcadores.
+    - La lista debe tener al menos 3 elementos.
+
+    Ejercicio 2:
+    - Crea una lista desordenada que contenga una lista anidada.
+    - Por ejemplo, una lista de "Países" con sublistas de "Ciudades"
+      para cada país.
+
+    Ejercicio 3:
+    - Crea un formulario de registro que incluya los siguientes campos:
+        - Nombre de usuario (input text, requerido)
+        - Correo electrónico (input email, requerido)
+        - Contraseña (input password, requerido)
+        - Confirmar contraseña (input password, requerido)
+        - Aceptar términos y condiciones (checkbox, requerido)
+        - Botón de registro (submit)
+    - Asegúrate de utilizar los atributos apropiados para cada campo.
+
+    Ejercicio 4:
+    - Crea un enlace que abra en una nueva pestaña y que tenga un tooltip
+      que diga "Visita nuestra página de ayuda".
+    - El enlace debe dirigir a "https://www.ejemplo.com/ayuda".
+
+    Ejercicio 5:
+    - Crea una imagen que tenga un texto alternativo descriptivo.
+    - Además, asigna un atributo `data-imagen-id` con un valor de tu elección.
+
+    --------------------------------------------------------------------
+    **Recuerda:** Consulta la documentación y los ejemplos anteriores para
+    ayudarte a completar estos ejercicios. La práctica es esencial para
+    dominar HTML.
+    --------------------------------------------------------------------
+    -->
+    <section id="ejercicios">
+        <h2>Ejercicios Prácticos</h2>
+
+        <!--
+        --------------------------------------------------------------------
+        Puedes resolver los ejercicios directamente en este archivo copiando
+        y pegando el código necesario en el cuerpo del documento.
+        --------------------------------------------------------------------
+        -->
+    </section>
+
+    <!--
+    ====================================================================
+                              FIN DEL DOCUMENTO
+    ====================================================================
+
+    ¡Felicidades por completar esta lección sobre atributos y listas en HTML!
+    En la próxima lección, exploraremos **CSS** para darle estilo a tus páginas
+    web. Si tienes alguna duda, no dudes en revisar los comentarios y ejemplos
+    anteriores o buscar más información en los recursos recomendados.
+    ====================================================================
+    -->
+</body>
+</html>

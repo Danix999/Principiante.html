@@ -1,0 +1,272 @@
+<!--
+====================================================================
+               Proyecto de Aprendizaje: Desarrollo Web Full-Stack
+====================================================================
+
+Este archivo HTML está diseñado para enseñarte todos los conceptos básicos de HTML.
+Cada sección está comentada para explicar su propósito y funcionamiento.
+También encontrarás ejercicios al final para practicar lo aprendido.
+
+====================================================================
+-->
+
+<!DOCTYPE html>
+<html lang="es">
+<!--
+====================================================================
+                        CABECERA DEL DOCUMENTO
+====================================================================
+
+La sección <head> contiene metadatos sobre el documento, enlaces a
+hojas de estilo, scripts, y el título de la página.
+-->
+<head>
+    <!--
+    --------------------------------------------------------------------
+    Definición de la codificación de caracteres.
+    UTF-8 soporta una amplia gama de caracteres y símbolos.
+    --------------------------------------------------------------------
+    -->
+    <meta charset="UTF-8">
+
+    <!--
+    --------------------------------------------------------------------
+    Configuración de la ventana gráfica para asegurar que la página
+    se vea bien en dispositivos móviles.
+    --------------------------------------------------------------------
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--
+    --------------------------------------------------------------------
+    Título de la página que aparece en la pestaña del navegador.
+    --------------------------------------------------------------------
+    -->
+    <title>Aprendiendo HTML - Mi Primera Página</title>
+
+    <!--
+    --------------------------------------------------------------------
+    Estilos internos para dar un diseño básico a la página.
+    Puedes mover estos estilos a un archivo CSS externo más adelante.
+    --------------------------------------------------------------------
+    -->
+    <style>
+        /* Estilo para el cuerpo de la página */
+        body {
+            font-family: Arial, sans-serif; /* Fuente del texto */
+            margin: 20px; /* Margen alrededor del contenido */
+            background-color: #f9f9f9; /* Color de fondo suave */
+        }
+
+        /* Estilo para el encabezado y pie de página */
+        header, footer {
+            background-color: #4CAF50; /* Color de fondo verde */
+            color: white; /* Color del texto blanco */
+            padding: 10px 0; /* Espaciado interno */
+            text-align: center; /* Centrar el texto */
+        }
+
+        /* Estilo para la navegación */
+        nav ul {
+            list-style-type: none; /* Quitar viñetas */
+            padding: 0; /* Quitar padding */
+        }
+
+        nav li {
+            display: inline; /* Mostrar los elementos en línea */
+            margin: 0 15px; /* Espaciado entre enlaces */
+        }
+
+        nav a {
+            color: white; /* Color de los enlaces */
+            text-decoration: none; /* Quitar subrayado */
+        }
+
+        nav a:hover {
+            text-decoration: underline; /* Subrayar al pasar el cursor */
+        }
+
+        /* Estilo para las secciones principales */
+        main {
+            background-color: white; /* Fondo blanco para el contenido */
+            padding: 20px; /* Espaciado interno */
+            border-radius: 5px; /* Bordes redondeados */
+            box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Sombra sutil */
+        }
+
+        /* Estilo para las imágenes */
+        img {
+            max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+            height: auto; /* Mantiene la proporción de la imagen */
+            border-radius: 5px; /* Bordes redondeados */
+        }
+
+        /* Estilo para formularios */
+        form label {
+            display: block; /* Mostrar etiquetas en bloque */
+            margin-top: 10px; /* Espaciado superior */
+        }
+
+        form input, form textarea {
+            width: 100%; /* Campos de entrada ocupan todo el ancho */
+            padding: 8px; /* Espaciado interno */
+            margin-top: 5px; /* Espaciado superior */
+            box-sizing: border-box; /* Incluye padding y border en el ancho total */
+        }
+
+        form input[type="submit"] {
+            width: auto; /* Ancho automático para el botón de enviar */
+            background-color: #4CAF50; /* Color de fondo verde */
+            color: white; /* Color del texto blanco */
+            border: none; /* Sin bordes */
+            padding: 10px 20px; /* Espaciado interno */
+            cursor: pointer; /* Cursor de mano al pasar sobre el botón */
+            border-radius: 5px; /* Bordes redondeados */
+        }
+
+        form input[type="submit"]:hover {
+            background-color: #45a049; /* Cambio de color al pasar el cursor */
+        }
+    </style>
+</head>
+
+<body>
+    <!--
+    ====================================================================
+                                ENCABEZADO
+    ====================================================================
+
+    El <header> contiene el título principal y la navegación de la página.
+    -->
+    <header>
+        <h1>Mi Página Personal</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">Sobre Mí</a></li>
+                <li><a href="#hobbies">Hobbies</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--
+    ====================================================================
+                               CONTENIDO PRINCIPAL
+    ====================================================================
+
+    La sección <main> contiene el contenido principal de la página.
+    Está dividida en diferentes <section> para organizar la información.
+    -->
+    <main>
+        <!--
+        --------------------------------------------------------------------
+                        SECCIÓN: Sobre Mí
+        --------------------------------------------------------------------
+        -->
+        <section id="about">
+            <h2>Sobre Mí</h2>
+            <p>Hola, soy <strong>[Tu Nombre]</strong>, un entusiasta del desarrollo web. Me apasiona crear sitios y aplicaciones que sean funcionales y atractivos.</p>
+            <!--
+            --------------------------------------------------------------------
+            Inserta una imagen tuya. Asegúrate de tener una imagen en la ruta
+            especificada o actualiza el atributo src con la ruta correcta.
+            --------------------------------------------------------------------
+            -->
+            <img src="tu-foto.jpg" alt="Foto de [Tu Nombre]" width="200">
+        </section>
+
+        <!--
+        --------------------------------------------------------------------
+                        SECCIÓN: Hobbies
+        --------------------------------------------------------------------
+        -->
+        <section id="hobbies">
+            <h2>Mis Hobbies</h2>
+            <ul>
+                <li>Programación</li>
+                <li>Lectura</li>
+                <li>Deportes</li>
+            </ul>
+        </section>
+
+        <!--
+        --------------------------------------------------------------------
+                        SECCIÓN: Contacto
+        --------------------------------------------------------------------
+        -->
+        <section id="contact">
+            <h2>Contacto</h2>
+            <!--
+            --------------------------------------------------------------------
+            Formulario de contacto para que los visitantes puedan enviarte
+            mensajes. El atributo action debe apuntar a la URL que procesará
+            los datos del formulario (servidor backend).
+            --------------------------------------------------------------------
+            -->
+            <form action="/enviar" method="post">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="4" cols="50" required></textarea>
+
+                <input type="submit" value="Enviar">
+            </form>
+        </section>
+    </main>
+
+    <!--
+    ====================================================================
+                                PIE DE PÁGINA
+    ====================================================================
+
+    El <footer> contiene información de derechos de autor u otros
+    enlaces relevantes.
+    -->
+    <footer>
+        <p>&copy; 2024 [Tu Nombre]. Todos los derechos reservados.</p>
+    </footer>
+
+    <!--
+    ====================================================================
+                             EJERCICIOS PRÁCTICOS
+    ====================================================================
+
+    1. **Crea una Página de Portafolio:**
+       - Añade una nueva sección llamada "Portafolio".
+       - Dentro de esta sección, crea una lista de proyectos con títulos y descripciones.
+       - Agrega imágenes representativas para cada proyecto.
+
+    2. **Diseña una Página de Blog:**
+       - Crea una nueva página llamada blog.html.
+       - Incluye varias entradas de blog utilizando encabezados, párrafos, imágenes y enlaces.
+       - Asegúrate de incluir una navegación para regresar a la página principal.
+
+    3. **Construye un Formulario de Registro:**
+       - En una nueva sección o página, crea un formulario de registro que incluya:
+         - Nombre de usuario
+         - Correo electrónico
+         - Contraseña
+         - Confirmación de contraseña
+         - Botón de registro
+       - Utiliza diferentes tipos de inputs y asegúrate de validar los campos necesarios.
+
+    4. **Implementa Listas Anidadas:**
+       - Dentro de la sección "Hobbies", añade sublistas para detallar más cada hobby.
+       - Por ejemplo, si uno de tus hobbies es "Deportes", puedes listar los deportes que practicas.
+
+    5. **Crea una Tabla de Habilidades:**
+       - Añade una nueva sección llamada "Habilidades".
+       - Crea una tabla que liste tus habilidades y tu nivel de competencia en cada una.
+
+    --------------------------------------------------------------------
+    **Recuerda:** La práctica constante es clave para dominar HTML. No dudes
+    en experimentar con diferentes etiquetas y atributos para ver cómo afectan
+    la apariencia y funcionalidad de tu página.
+    --------------------------------------------------------------------
+    -->
+</body>
+</html>
